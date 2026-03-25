@@ -10,7 +10,7 @@ from pathlib import Path
 def get_version_from_branch(branch: str) -> str:
     if branch == "master":
         return "master"
-    if match := re.match(r"openssl-(3\.[0-9]+)", branch):
+    if match := re.match(r"openssl-([34]\.[0-9]+)", branch):
         return match.group(1)
     if branch == "OpenSSL_1_1_1-stable":
         return "1.1.1"
